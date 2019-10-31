@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Notification</string>
+
+    <!--select-->
+    <string name="tv_select">Please select usage</string>
+    <string name="btn_select_user">General user</string>
+    <string name="btn_select_admin">Admin</string>
+
+    <!--login-->
+    <string name="tv_login">Login</string>
+    <string name="et_username">USERNAME</string>
+    <string name="et_password">PASSWORD</string>
+    <string name="btn_back">Back</string>
+
+    <!--Home-->
+    <string name="btn_add_room">AddRoom</string>
+    <string name="btn_setting">Setting</string>
+
+    <!--Room-->
+    <string name="btn_room">Room</string>
+    <string name="btn_timer">Timer</string>
+    <string name="btn_count">Countdown</string>
+    <string name="btn_delete">Delete</string>
+    <string name="btn_alert">Alert</string>
+    <string name="tv_subject">วิชา</string>
+    <string name="tv_time">เวลา</string>
+    <string name="tv_teacher">ผู้สอน</string>
+    <string name="tv_temp">อุณหภูมิ</string>
+    <string name="tv_moisture">ความชื้น</string>
+    <string name="tv_status">สถานะ</string>
+
+    <!--TimerAndCountdown-->
+    <string name="btn_start">Start</string>
+    <string name="btn_stop">Pause</string>
+    <string name="btn_reset">Reset</string>
+
+    <!--Add room-->
+    <string name="tv_room_number">Room Number</string>
+    <string name="tv_room_upload">Upload File</string>
+    <string name="btn_submit">Submit</string>
+    <string name="btn_history">History</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+
+</resources>
+
+
+
+

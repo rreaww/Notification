@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_login"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="20dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_setTime"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/frame_edittext"
+        android:hint="MINUTES"
+        android:inputType="number"
+        android:maxLength="4"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView_login"
+        app:layout_constraintStart_toStartOf="@+id/cardView_login"
+        app:layout_constraintTop_toTopOf="@+id/cardView_login" />
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/btn_time"
+        android:fontFamily="@font/benchnine_bold"
+        android:text="Submit"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView_login"
+        app:layout_constraintEnd_toEndOf="@+id/cardView_login"
+        app:layout_constraintStart_toEndOf="@+id/et_setTime"
+        app:layout_constraintTop_toTopOf="@+id/cardView_login" />
+
+    <TextView
+        android:id="@+id/tv_countdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="00:00"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView_login" />
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/btn_time"
+        android:fontFamily="@font/benchnine_bold"
+        android:text="@string/btn_start"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_countdown" />
+
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="36dp"
+        android:background="@drawable/btn_time"
+        android:fontFamily="@font/benchnine_bold"
+        android:text="@string/btn_reset"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_start"
+        app:layout_constraintTop_toBottomOf="@+id/tv_countdown" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
