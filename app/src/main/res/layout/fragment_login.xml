@@ -34,7 +34,7 @@
                 android:fontFamily="@font/benchnine_bold"
                 android:text="@string/tv_login"
                 android:textColor="@color/colorBlack"
-                android:textSize="40dp"
+                android:textSize="40sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -46,7 +46,7 @@
                 android:fontFamily="@font/benchnine_bold"
                 android:text="@string/et_username"
                 android:textColor="@color/colorBlack"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_login" />
 
@@ -58,7 +58,8 @@
                 android:background="@drawable/frame_edittext"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_username" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_username"
+                android:inputType="text" />
 
             <TextView
                 android:id="@+id/tv_password"
@@ -68,7 +69,7 @@
                 android:fontFamily="@font/benchnine_bold"
                 android:text="@string/et_password"
                 android:textColor="@color/colorBlack"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/et_username" />
 
@@ -77,6 +78,7 @@
                 android:layout_width="300dp"
                 android:layout_height="40dp"
                 android:layout_margin="20dp"
+                android:inputType="numberPassword"
                 android:background="@drawable/frame_edittext"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -91,7 +93,7 @@
                 android:fontFamily="@font/benchnine_bold"
                 android:text="@string/tv_login"
                 android:textColor="@color/colorBlack"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/et_password" />
@@ -105,7 +107,7 @@
                 android:fontFamily="@font/benchnine_bold"
                 android:text="@string/btn_back"
                 android:textColor="@color/colorBlack"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/et_password" />

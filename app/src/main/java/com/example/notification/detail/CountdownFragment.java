@@ -12,11 +12,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.fragment.app.Fragment;
-
 import com.example.notification.R;
-
 import java.util.Locale;
 
 public class CountdownFragment extends Fragment {

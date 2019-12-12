@@ -42,7 +42,7 @@
         android:background="@drawable/btn_time"
         android:fontFamily="@font/benchnine_bold"
         android:text="Submit"
-        android:textSize="15dp"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="@+id/cardView_login"
         app:layout_constraintEnd_toEndOf="@+id/cardView_login"
         app:layout_constraintStart_toEndOf="@+id/et_setTime"

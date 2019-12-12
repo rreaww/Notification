@@ -9,12 +9,27 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.notification.model.Data;
 import com.example.notification.R;
 import com.example.notification.room.RoomActivity;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.List;
+import java.util.Map;
+
 
 public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.Holder> {
 
-    private String[] mDataSet;
+    private List<Data> dataList;
+    String TAG = "HomeAdapter";
+
+    public HomeAdapter(List<Data> result) {
+        this.dataList = result;
+    }
 
     class Holder extends RecyclerView.ViewHolder {
 
@@ -31,13 +46,22 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.Holder> {
                     view.getContext().startActivity(intent);
                 }
             });
-        }
 
-        public void setItem(int position) {
-            tv_room.setText(mDataSet[position]);
-            tv_time.setText("index = " + position);
-        }
+            DatabaseReference myRef = FirebaseDatabase.getInstance().getReference();
+            myRef.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    Map map = (Map) dataSnapshot.getValue();
+                    String value = String.valueOf(map.get("realtime"));
+                    tv_time.setText(value);
+                }
 
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+        }
     }
 
     @Override
@@ -50,16 +74,13 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.Holder> {
 
     @Override
     public void onBindViewHolder(@NonNull Holder holder, int position) {
-        holder.setItem(position);
+        Data data = dataList.get(position);
+        holder.tv_room.setText(String.valueOf(data.getRoomNumber()));
     }
 
     @Override
     public int getItemCount() {
-        return mDataSet.length;
-    }
-
-    public HomeAdapter(String[] dataSet) {
-        mDataSet = dataSet;
+        return dataList.size();
     }
 
 
